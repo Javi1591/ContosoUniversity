@@ -7,7 +7,7 @@ This project follows the Contoso University getting started tutorial from Micros
 # How to Run
 - Ste 1: Clone the repository from GitHub url
   - http://github.com/Javi1591/ContosoUniversity
-- Step 2: Navigate to the project directory, using command "cd MvcMovie" in the command console
+- Step 2: Navigate to the project directory, using command "cd ContosoUniversity" in the command console
 -  Step 3: Install the needed dependencies, as noted below, using the command "npm install"
   - Packages
     - Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 9.0
