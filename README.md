@@ -26,5 +26,3 @@ This project follows the Contoso University getting started tutorial from Micros
   - Labels linked to inputs  
   - Error messages clearly displayed  
   - Logical keyboard focus order
-
-# Screenshots
