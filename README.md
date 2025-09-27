@@ -36,3 +36,11 @@ This project follows the Contoso University getting started tutorial from Micros
 - Verify core CRUD flows for Students, Courses, Enrollments
 - Ensure pages render with no runtime errors and database interactions are correct.
 - Prevent regressions
+
+# Migrations
+- EF Core migrations are in: `ContosoUniversity/Migrations/`
+  - To list migrations locally: `dotnet ef migrations list`
+  - To apply the latest migration: `dotnet ef database update`
+
+# XML Scheme Note
+An XML seed file is included at `data/InitialData.xml`.
