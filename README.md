@@ -43,4 +43,27 @@ This project follows the Contoso University getting started tutorial from Micros
   - To apply the latest migration: `dotnet ef database update`
 
 # XML Scheme Note
-An XML seed file is included at `data/InitialData.xml`.
+Seed file is located at `data/InitialData.xml`
+
+```xml
+<University>
+  <Departments>
+    <Department Id="1" Name="Engineering"/>
+    <Department Id="2" Name="Humanities"/>
+  </Departments>
+
+  <Courses>
+    <Course Id="1050" Title="Chemistry" Credits="3" DepartmentId="1"/>
+    <Course Id="4022" Title="Microeconomics" Credits="3" DepartmentId="2"/>
+  </Courses>
+
+  <Students>
+    <Student Id="1" FirstName="Carson" LastName="Alexander" EnrollmentDate="2016-09-01"/>
+    <Student Id="2" FirstName="Meredith" LastName="Alonso"   EnrollmentDate="2018-09-01"/>
+  </Students>
+
+  <Enrollments>
+    <Enrollment StudentId="1" CourseId="1050" Grade="A"/>
+    <Enrollment StudentId="2" CourseId="4022" Grade="B"/>
+  </Enrollments>
+</University>
