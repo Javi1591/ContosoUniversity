@@ -8,6 +8,9 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<SchoolContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SchoolContext") ?? throw new InvalidOperationException("Connection string 'SchoolContext' not found.")));
 
+// Register service through dependency injection
+builder.Services.AddScoped<ContosoUniversity.Services.IStudentProgressService, ContosoUniversity.Services.StudentProgressService>();
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 var app = builder.Build();
@@ -39,8 +42,13 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.MapControllers();
+
 app.MapStaticAssets();
 app.MapRazorPages()
    .WithStaticAssets();
 
 app.Run();
+
+// For WebApplicationFactory<Program>
+public partial class Program { }
