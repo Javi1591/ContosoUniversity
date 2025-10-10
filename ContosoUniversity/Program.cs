@@ -13,6 +13,9 @@ builder.Services.AddScoped<ContosoUniversity.Services.IStudentProgressService, C
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
+// /healthz endpoint
+builder.Services.AddHealthChecks();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -47,6 +50,9 @@ app.MapControllers();
 app.MapStaticAssets();
 app.MapRazorPages()
    .WithStaticAssets();
+
+// Map health check endpoint
+app.MapHealthChecks("/healthz");
 
 app.Run();
 
